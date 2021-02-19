@@ -2,6 +2,15 @@
 
 namespace task_1_1
 {
+
+    enum format
+    {
+        None =0,
+        bold =1,
+        italic =2,
+        underline =3
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -92,7 +101,6 @@ namespace task_1_1
                     break;
 
                 case 5:
-
                     int sum = 0;
 
                     for(int i=0; i<1000; i++)
@@ -103,6 +111,53 @@ namespace task_1_1
                         }
                     }
                     Console.WriteLine("Результат: {0}", sum);
+
+                    break;
+
+                case 6:
+                    bool exitFromCase6 = true;
+                    int[] nums = new int[4] { 0, 0, 0, 0 };
+
+                    while (exitFromCase6)
+                    {
+
+                        string strNums = "";
+                        int formatOfText = Convert.ToInt32(Console.ReadLine());
+
+                        if (formatOfText > 0 && formatOfText < 4)
+                        {
+
+                            if (nums[formatOfText] == 0)
+                            {
+                                nums[formatOfText] = 1;
+                            }
+                            else
+                            {
+                                nums[formatOfText] = 0;
+                            }
+
+                            int countOfFormat = 0;
+                            for(int i=1; i<nums.Length; i++)
+                            {
+                                if(nums[i] == 1)
+                                {
+                                    strNums += (format)i + " ";
+                                    countOfFormat++;
+                                }
+                            }
+
+                            if(countOfFormat==0)
+                            {
+                                strNums += (format)0;
+                            }
+
+                            Console.WriteLine(strNums);
+                        }
+                        else
+                        {
+                            exitFromCase6 = false;
+                        }
+                    }
 
                     break;
 
