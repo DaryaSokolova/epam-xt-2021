@@ -118,8 +118,15 @@ namespace task_1_1
                     bool exitFromCase6 = true;
                     int[] nums = new int[4] { 0, 0, 0, 0 };
 
+                    Console.WriteLine("Параметры записи : {0}", (format)0);
+
                     while (exitFromCase6)
                     {
+                        Console.WriteLine("Введите :");
+                        Console.WriteLine("1: bold ");
+                        Console.WriteLine("2: italic ");
+                        Console.WriteLine("3: underline ");
+                        Console.WriteLine("Иные цифры: выход из программы :) ");
 
                         string strNums = "";
                         int formatOfText = Convert.ToInt32(Console.ReadLine());
@@ -151,7 +158,7 @@ namespace task_1_1
                                 strNums += (format)0;
                             }
 
-                            Console.WriteLine(strNums);
+                            Console.WriteLine("Параметры записи : {0}", strNums);
                         }
                         else
                         {
