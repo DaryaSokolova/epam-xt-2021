@@ -35,10 +35,32 @@ namespace task_1_1
 
                     for (int i = 0; i < N; i++)
                     {
-                        for (int j = 0; j < i+1; j++)
+                        for (int j = 0; j < i + 1; j++)
                         {
                             Console.Write('*');
                         }
+                        Console.WriteLine();
+                    }
+
+                    break;
+
+                case 3:
+                    Console.Write("Введите N :");
+                    N = Convert.ToInt32(Console.ReadLine());
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        for (int j = 1; j < N - i; j++)
+                        {
+                            Console.Write(' ');
+                        }
+
+                        for (int j = N - 2 * i; j <= N; j++)
+                        {
+                            Console.Write('*');
+
+                        }
+
                         Console.WriteLine();
                     }
 
