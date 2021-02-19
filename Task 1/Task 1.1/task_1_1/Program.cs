@@ -29,6 +29,21 @@ namespace task_1_1
 
                     break;
 
+                case 2:
+                    Console.Write("Введите N :");
+                    int N = Convert.ToInt32(Console.ReadLine());
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        for (int j = 0; j < i+1; j++)
+                        {
+                            Console.Write('*');
+                        }
+                        Console.WriteLine();
+                    }
+
+                    break;
+
                 default:
                     Console.WriteLine("Такого номера нет :( ");
                     break;
