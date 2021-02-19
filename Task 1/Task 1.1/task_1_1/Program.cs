@@ -66,6 +66,31 @@ namespace task_1_1
 
                     break;
 
+                case 4:
+                    Console.Write("Введите N :");
+                    N = Convert.ToInt32(Console.ReadLine());
+
+                    for (int indexTriangle = 1; indexTriangle <= N; indexTriangle++)
+                    {
+                        for (int i = 0; i < indexTriangle; i++)
+                        {
+                            for (int j = 1; j < N - i; j++)
+                            {
+                                Console.Write(' ');
+                            }
+
+                            for (int j = indexTriangle - 2 * i; j <= indexTriangle; j++)
+                            {
+                                Console.Write('*');
+
+                            }
+
+                            Console.WriteLine();
+                        }
+                    }
+
+                    break;
+
                 default:
                     Console.WriteLine("Такого номера нет :( ");
                     break;
