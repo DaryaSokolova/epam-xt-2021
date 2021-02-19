@@ -91,6 +91,21 @@ namespace task_1_1
 
                     break;
 
+                case 5:
+
+                    int sum = 0;
+
+                    for(int i=0; i<1000; i++)
+                    {
+                        if (i % 5 == 0 || i % 3 == 0)
+                        {
+                            sum += i;
+                        }
+                    }
+                    Console.WriteLine("Результат: {0}", sum);
+
+                    break;
+
                 default:
                     Console.WriteLine("Такого номера нет :( ");
                     break;
