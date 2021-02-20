@@ -13,6 +13,36 @@ namespace task_1_1
 
     class Program
     {
+        static void quicksort(int []a, int l, int r)
+        {
+            int i = l; int j = r;
+            int m = a[(r + l) / 2];
+
+            while (i <= j)
+            {
+                while (a[i] < m)
+                {
+                    i++;
+                }
+                while (a[j] > m)
+                {
+                    j--;
+                }
+
+                if (i <= j)
+                {
+                    int temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+
+                    i++;
+                    j--;
+                }
+            }
+
+            if (j > l) quicksort(a, l, j);
+            if (i < r) quicksort(a, i, r);
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -164,6 +194,43 @@ namespace task_1_1
                         {
                             exitFromCase6 = false;
                         }
+                    }
+
+                    break;
+
+                case 7:
+
+                    int[] arr = new int[10];
+                    int min = Int32.MaxValue;
+                    int max = Int32.MinValue;
+                    Random rnd = new Random();
+
+                    for(int i=0; i<arr.Length; i++)
+                    {
+                        int value = rnd.Next(-100, 100);
+                        arr[i] = value;
+
+                        if (arr[i] > max)
+                        {
+                            max = arr[i];
+                        }
+
+                        if (arr[i] < min)
+                        {
+                            min = arr[i];
+                        }
+
+                        Console.Write(arr[i] + " ");
+                    }
+                    Console.WriteLine();
+
+                    Console.WriteLine("min : {0}, max : {1}", min, max);
+                    quicksort(arr, 0, arr.Length-1);
+
+                    Console.WriteLine("Отсортированный массив :");
+                    foreach (int num in arr)
+                    {
+                        Console.Write(num + " " );
                     }
 
                     break;
