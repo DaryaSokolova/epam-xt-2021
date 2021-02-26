@@ -32,7 +32,22 @@ namespace task_1_2
 
                 case 2:
 
+                    string first = "написать программу, которая";
+                    string second = "описание";
+                    string answer = "";
 
+                    foreach (char ch in first)
+                        if (!second.Contains(ch))
+                        {
+                            answer += ch;
+                        }
+                        else
+                        {
+                            answer += ch;
+                            answer += ch;
+                        }
+
+                    Console.WriteLine("Результат: {0}", answer);
                     break;
 
                 default:
