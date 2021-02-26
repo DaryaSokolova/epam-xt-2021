@@ -71,6 +71,30 @@ namespace task_1_2
             Console.WriteLine("Результат: {0}", count);
         }
 
+        static void Task4()
+        {
+            string text = "я плохо учил русский язык. забываю начинать предложения с заглавной. хорошо, что можно написать программу!";
+
+            string[] sentence = text.Split('.', '!', '?');
+
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                if (sentence[i] != "")
+                {
+
+                    sentence[i] = sentence[i].Trim();
+                    sentence[i] += text.Substring(text.LastIndexOf(sentence[i]) + sentence[i].Length, 1);
+
+                    string temp = sentence[i];
+                    sentence[i] = char.ToUpper(temp[0]) + temp.Substring(1);
+                }
+            }
+
+            text = string.Join(" ", sentence);
+
+            Console.WriteLine("Результат: {0}", text);
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -88,6 +112,10 @@ namespace task_1_2
 
                 case 3:
                     Task3();
+                    break;
+
+                case 4:
+                    Task4();
                     break;
 
                 default:
