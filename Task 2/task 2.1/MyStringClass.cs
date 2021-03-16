@@ -114,5 +114,18 @@ namespace task_2._1
 
             return -1;
         }
+
+        public int LastIndexOf(char ch)
+        {
+            for (int i = this.Length-1; i > 0; i--)
+            {
+                if (this.chars[i] == ch)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
     }
 }
