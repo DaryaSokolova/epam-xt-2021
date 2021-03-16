@@ -169,7 +169,20 @@ namespace task_2._1
             }
             else
             {
+                for (int i = index; i < index + str.Length; i++)
+                {
+                    temp[i] = str.chars[i];
+                }
 
+                if (temp.Length != index + str.Length)
+                {
+
+                    int tempCount = 0;
+                    for (int i = index + str.Length; i < temp.Length; i++)
+                    {
+                        temp[i] = this.chars[tempCount++];
+                    }
+                }
             }
 
             MyStringClass tempObject = new MyStringClass(temp);

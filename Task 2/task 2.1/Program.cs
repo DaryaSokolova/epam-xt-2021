@@ -50,18 +50,18 @@ namespace task_2._1
             //MyStringClass newString3 = MyStringClass.Concat(arr);
             //Console.WriteLine(newString3.getChars());
 
-            //str2 = str2.Insert(2, str1);
-            //Console.WriteLine(str2);
-
-            //newString2 = newString2.Insert(2, newString1);
-            //Console.WriteLine(newString2.getChars());
-
-
-            str2 = str2.Insert(2, str1);
+            str2 = str2.Insert(0, str1);
             Console.WriteLine(str2);
 
-            newString2 = newString2.Insert(2, newString1);
+            newString2 = newString2.Insert(0, newString1);
             Console.WriteLine(newString2.getChars());
+
+            //char ch = 'a';
+            //str2 = str2.Insert(2, ch);
+            //Console.WriteLine(str2);
+
+            //newString2 = newString2.Insert(2, a);
+            //Console.WriteLine(newString2.getChars());
 
         }
     }
