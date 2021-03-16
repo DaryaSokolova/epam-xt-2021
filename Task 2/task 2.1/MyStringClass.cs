@@ -127,5 +127,10 @@ namespace task_2._1
 
             return -1;
         }
+
+        public char[] ToCharArray()
+        {
+            return this.getChars();
+        }
     }
 }
