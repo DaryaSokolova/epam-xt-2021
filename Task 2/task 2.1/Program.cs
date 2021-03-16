@@ -23,7 +23,10 @@ namespace task_2._1
             //newString1= MyStringClass.Concat(newString1, newString2);
             //Console.WriteLine(newString1.getChars());
 
+            char ch = 'o';
+            Console.WriteLine(str1.IndexOf(ch));
 
+            Console.WriteLine(newString1.IndexOf(ch));
         }
     }
 }

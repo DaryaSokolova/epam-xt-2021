@@ -101,5 +101,18 @@ namespace task_2._1
 
             return str;
         }
+
+        public int IndexOf(char ch)
+        {
+            for (int i = 0; i < this.Length; i++)
+            {
+                if (this.chars[i]==ch)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
     }
 }
