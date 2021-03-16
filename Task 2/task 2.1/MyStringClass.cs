@@ -101,6 +101,12 @@ namespace task_2._1
 
             return str;
         }
+        public static MyStringClass Concat(char[] str)
+        {
+            MyStringClass temp = new MyStringClass(str);
+
+            return temp;
+        }
 
         public int IndexOf(char ch)
         {

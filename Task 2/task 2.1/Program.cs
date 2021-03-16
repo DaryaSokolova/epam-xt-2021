@@ -28,11 +28,26 @@ namespace task_2._1
 
             //Console.WriteLine(newString1.LastIndexOf(ch));
 
-            char[] arr1 = str1.ToCharArray();
-            Console.WriteLine(arr1);
+            //char[] arr1 = str1.ToCharArray();
+            //Console.WriteLine(arr1);
 
-            char[] arr2 = newString1.ToCharArray();
-            Console.WriteLine(arr2);
+            //char[] arr2 = newString1.ToCharArray();
+            //Console.WriteLine(arr2);
+
+            //char[] arr = new char[5];
+            //char temp = 'a';
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    arr[i] = temp;
+            //    temp++;
+            //}
+
+            //string str3 = String.Concat(arr);
+            //Console.WriteLine(str3);
+
+            //MyStringClass newString3 = MyStringClass.Concat(arr);
+            //Console.WriteLine(newString3.getChars());
         }
     }
 }
