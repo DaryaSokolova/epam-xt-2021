@@ -78,9 +78,9 @@ namespace task_2._1
 
         public static char[] operator +(MyStringClass c1, MyStringClass c2)
         {
-            char[] temp = new char[c1.Length+c2.Length];
+            char[] temp = new char[c1.Length + c2.Length];
 
-            for (int i = 0; i < c1.Length ; i++)
+            for (int i = 0; i < c1.Length; i++)
             {
                 temp[i] = c1.chars[i];
             }
@@ -101,9 +101,9 @@ namespace task_2._1
 
             return str;
         }
-        public static MyStringClass Concat(char[] str)
+        public static MyStringClass Concat(char[] arr)
         {
-            MyStringClass temp = new MyStringClass(str);
+            MyStringClass temp = new MyStringClass(arr);
 
             return temp;
         }
@@ -112,7 +112,7 @@ namespace task_2._1
         {
             for (int i = 0; i < this.Length; i++)
             {
-                if (this.chars[i]==ch)
+                if (this.chars[i] == ch)
                 {
                     return i;
                 }
@@ -123,7 +123,7 @@ namespace task_2._1
 
         public int LastIndexOf(char ch)
         {
-            for (int i = this.Length-1; i > 0; i--)
+            for (int i = this.Length - 1; i > 0; i--)
             {
                 if (this.chars[i] == ch)
                 {
@@ -137,6 +137,43 @@ namespace task_2._1
         public char[] ToCharArray()
         {
             return this.getChars();
+        }
+
+        public MyStringClass Insert(int index, MyStringClass str)
+        {
+            char[] temp = new char[this.Length + str.Length];
+
+            if (index != 0)
+            {
+
+                for (int i = 0; i < index; i++)
+                {
+                    temp[i] = this.chars[i];
+                }
+
+                int tempCount = 0;
+                for (int i = index; i < index + str.Length; i++)
+                {
+                    temp[i] = str.chars[tempCount++];
+                }
+
+                if (temp.Length != index + str.Length)
+                {
+
+                    tempCount = index;
+                    for (int i = index + str.Length; i < temp.Length; i++)
+                    {
+                        temp[i] = this.chars[tempCount++];
+                    }
+                }
+            }
+            else
+            {
+
+            }
+
+            MyStringClass tempObject = new MyStringClass(temp);
+            return tempObject;
         }
     }
 }

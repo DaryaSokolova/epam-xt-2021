@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace task_2._1
 {
@@ -48,6 +49,20 @@ namespace task_2._1
 
             //MyStringClass newString3 = MyStringClass.Concat(arr);
             //Console.WriteLine(newString3.getChars());
+
+            //str2 = str2.Insert(2, str1);
+            //Console.WriteLine(str2);
+
+            //newString2 = newString2.Insert(2, newString1);
+            //Console.WriteLine(newString2.getChars());
+
+
+            str2 = str2.Insert(2, str1);
+            Console.WriteLine(str2);
+
+            newString2 = newString2.Insert(2, newString1);
+            Console.WriteLine(newString2.getChars());
+
         }
     }
 }
