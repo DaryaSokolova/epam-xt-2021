@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task_2._1._2
 {
-    class Ring : RoundShape
+    class Ring : RoundShape, IHaveArea
     {
         private int innerRadius = 0;
 
@@ -29,7 +29,7 @@ namespace task_2._1._2
             InnerRadius = innerRadius;
         }
 
-        public override double GetArea()=> Math.PI * (radius * radius - innerRadius * innerRadius);
+        public double GetArea()=> Math.PI * (radius * radius - innerRadius * innerRadius);
 
         public override double GetPerimeter() => 2 * Math.PI * (radius + innerRadius);
     }

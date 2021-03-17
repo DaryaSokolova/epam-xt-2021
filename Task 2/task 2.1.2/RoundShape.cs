@@ -38,7 +38,6 @@ namespace task_2._1._2
         }
 
         public abstract double GetPerimeter();
-        public abstract double GetArea();
 
     }
 }
