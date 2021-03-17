@@ -2,7 +2,7 @@
 using System.Text;
 using MyStringLibrary;
 
-namespace task_2._1
+namespace task_2._1._1
 {
     class Program
     {
@@ -51,11 +51,11 @@ namespace task_2._1
             //MyStringClass newString3 = MyStringClass.Concat(arr);
             //Console.WriteLine(newString3.getChars());
 
-            //str2 = str2.Insert(0, str1);
-            //Console.WriteLine(str2);
+            str2 = str2.Insert(1, str1);
+            Console.WriteLine(str2);
 
-            //newString2 = newString2.Insert(0, newString1);
-            //Console.WriteLine(newString2.getChars());
+            newString2 = newString2.Insert(1, newString1);
+            Console.WriteLine(newString2.getChars());
 
         }
     }

@@ -7,16 +7,29 @@ namespace MyStringLibrary
     public class MyStringClass
     {
 
-        private char[] chars { get; set; }
+        private char[] chars;
 
-        public MyStringClass(char[] _chars)
+        public char[] Chars
         {
-            chars = _chars;
+            get
+            {
+                return chars;
+            }
+
+            private set
+            {
+                chars = value;
+            }
+        }
+
+        public MyStringClass(char[] chars)
+        {
+            Chars = chars;
         }
 
         public MyStringClass(string str)
         {
-            chars = str.ToCharArray();
+            Chars = str.ToCharArray();
         }
 
         public char[] getChars()
