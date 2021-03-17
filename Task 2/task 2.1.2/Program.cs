@@ -4,18 +4,6 @@ namespace task_2._1._2
 {
     class Program
     {
-        enum Figures
-        {
-            None,
-            Circle,
-            CircleWithoutArea,
-            Ring,
-            Rectangle,
-            Quadrate,
-            Triangle,
-            Line
-        }
-
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -30,12 +18,16 @@ namespace task_2._1._2
             string[] arrTri = new string[10];
             string[] arrLin = new string[10];
 
+            Person per = new Person();
+            per.writeName();
+
             for (int j = 0; j < 4; j++)
             {
-                Console.WriteLine("Выберите действие:");
+                Console.WriteLine($"{per.Name}, выберите действие:");
                 Console.WriteLine("1 - добавить фигуру");
                 Console.WriteLine("2 - вывести все фигуры");
                 Console.WriteLine("3 - очистить поле");
+                Console.WriteLine("4 - сменить пользователя");
                 int switchAction = Convert.ToInt32(Console.ReadLine());
                 switch (switchAction)
                 {
@@ -313,6 +305,13 @@ namespace task_2._1._2
                         }
 
                         break;
+
+                    case 4:
+
+                        per.writeName();
+
+                        break;
+
                     default:
                         Console.WriteLine("Вы вышли");
                         break;
