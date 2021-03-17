@@ -7,7 +7,7 @@ namespace task_2._1
     class MyStringClass
     {
 
-        private char[] chars;
+        private char[] chars { get; set; }
 
         public MyStringClass(char[] _chars)
         {
