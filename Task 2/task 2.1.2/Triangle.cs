@@ -16,7 +16,7 @@ namespace task_2._1._2
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("error");
+                    throw new Exception("Отрицательный Part1!");
                 }
                 else
                 {
@@ -32,7 +32,7 @@ namespace task_2._1._2
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("error");
+                    throw new Exception("Отрицательный Part2!");
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace task_2._1._2
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("error");
+                    throw new Exception("Отрицательный Part3!");
                 }
                 else
                 {
@@ -65,7 +65,24 @@ namespace task_2._1._2
             Part3 = part3;
         }
 
+        public Triangle() { }
+
         public override double GetPerimeter() => part1 + part2 + part3;
         public virtual double GetArea() => Math.Sqrt(GetPerimeter() / 2 * (GetPerimeter() / 2 - part1) * (GetPerimeter() / 2 - part2) * (GetPerimeter() / 2 - part3));
+
+        public override void Enter()
+        {
+            Console.WriteLine("part1=");
+            Part1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("part2=");
+            Part2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("part3=");
+            Part3 = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public override string GetInfo()
+        {
+            return ($"ТРЕУГОЛЬНИК: Стoроны: {part1}, {part2}, {part3} Периметр: {GetPerimeter()} Площадь: {GetArea()}");
+        }
     }
 }

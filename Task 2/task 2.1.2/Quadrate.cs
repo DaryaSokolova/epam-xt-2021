@@ -10,11 +10,11 @@ namespace task_2._1._2
 
         public int Width
         {
-            private set
+            protected set
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("error");
+                    throw new Exception("Отрицательный Width!");
                 }
                 else
                 {
@@ -29,7 +29,20 @@ namespace task_2._1._2
             Width = width;
         }
 
+        public Quadrate() { }
+
         public override double GetPerimeter() => 4 * width;
         public virtual double GetArea() => width * width;
+
+        public override void Enter()
+        {
+            Console.WriteLine("width=");
+            Width = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public override string GetInfo()
+        {
+            return ($"КВАДРАТ: Длины: {width} Периметр: {GetPerimeter()} Площадь: {GetArea()}");
+        }
     }
 }

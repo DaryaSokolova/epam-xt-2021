@@ -25,6 +25,24 @@ namespace task_2._1._2
             X2 = x2;
             Y2 = y2;
         }
+
+        public Line() { }
         public override double GetPerimeter() => Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+
+        public override void Enter()
+        {
+            Console.WriteLine("x1=");
+            x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("y1=");
+            y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("x2=");
+            x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("y2=");
+            y2 = Convert.ToInt32(Console.ReadLine());
+        }
+        public override string GetInfo()
+        {
+            return ($"ЛИНИЯ: Координаты точек линии: ({x1},{y1}) и ({x2},{y2}), а длина равна: {GetPerimeter()}");
+        }
     }
 }

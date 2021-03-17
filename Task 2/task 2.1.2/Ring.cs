@@ -14,11 +14,19 @@ namespace task_2._1._2
             {
                 if (value < 0 || value >= radius)
                 {
-                    Console.WriteLine("error");
+                    throw new Exception("Отрицательный InnerRadius!");
                 }
                 else
                 {
-                    innerRadius = value;
+                    if (value >= radius)
+                    {
+                        throw new Exception("InnerRadius>= Radius!");
+                    }
+                    else
+                    {
+                        innerRadius = value;
+
+                    }
                 }
             }
             get { return innerRadius; }
@@ -29,8 +37,27 @@ namespace task_2._1._2
             InnerRadius = innerRadius;
         }
 
-        public double GetArea()=> Math.PI * (radius * radius - innerRadius * innerRadius);
+        public Ring() { }
+
+        public double GetArea() => Math.PI * (radius * radius - innerRadius * innerRadius);
 
         public override double GetPerimeter() => 2 * Math.PI * (radius + innerRadius);
+
+        public override void Enter()
+        {
+            Console.WriteLine("x=");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("y=");
+            y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("radius=");
+            Radius = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("innerRadius=");
+            InnerRadius = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public override string GetInfo()
+        {
+            return ($"КРУГ: Координаты: {x},{y} Радиус: {radius} Внутренний радиус: {innerRadius} Площадь: {GetArea()} Длина: {GetPerimeter()}");
+        }
     }
 }

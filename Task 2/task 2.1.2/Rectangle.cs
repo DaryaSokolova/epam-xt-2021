@@ -14,7 +14,7 @@ namespace task_2._1._2
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("error");
+                    throw new Exception("Отрицательный Height!");
                 }
                 else
                 {
@@ -28,8 +28,22 @@ namespace task_2._1._2
         {
             Height = height;
         }
+        public Rectangle() { }
 
         public override double GetPerimeter() => 2 * (width * height);
         public override double GetArea() => width * height;
+
+        public override string GetInfo()
+        {
+            return ($"ПРЯМОУГОЛЬНИК: Длины: {height} и {width} Периметр: {GetPerimeter()} Площадь: {GetArea()}");
+        }
+
+        public override void Enter()
+        {
+            Console.WriteLine("height=");
+            Height = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("width=");
+            Width = Convert.ToInt32(Console.ReadLine());
+        }
     }
 }

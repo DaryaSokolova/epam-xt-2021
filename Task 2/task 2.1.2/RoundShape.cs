@@ -6,17 +6,17 @@ namespace task_2._1._2
 {
     abstract class RoundShape : Figure
     {
-        protected int radius = 0;
+        protected int radius;
         protected int x;
         protected int y;
 
         public int Radius
         {
-            private set
+            protected set
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("error");
+                    throw new Exception("Отрицательный Radius!");
                 }
                 else
                 {
@@ -35,6 +35,18 @@ namespace task_2._1._2
             X = x;
             Y = y;
             Radius = radius;
+        }
+
+        public RoundShape() { }
+
+        public override void Enter()
+        {
+            Console.Write("x=");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("y=");
+            y = Convert.ToInt32(Console.ReadLine());
+            Console.Write("radius=");
+            Radius = Convert.ToInt32(Console.ReadLine());
         }
 
     }
