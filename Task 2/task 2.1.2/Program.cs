@@ -8,13 +8,9 @@ namespace task_2._1._2
         {
             Console.WriteLine("Hello World!");
 
-            Circle cl = new Circle(3,4,5);
+            Rectangle rc = new Rectangle(3, 3);
 
-            Console.WriteLine(cl.GetArea());
-
-            Ring rg = new Ring(3, 4, 3, 4);
-
-            Console.WriteLine(rg.GetArea());
+            Console.WriteLine(rc.GetPerimeter());
         }
     }
 }

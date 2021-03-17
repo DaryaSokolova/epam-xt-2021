@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task_2._1._2
 {
-    abstract class RoundShape
+    abstract class RoundShape : Figure
     {
         protected int radius = 0;
         protected int x;
@@ -36,8 +36,6 @@ namespace task_2._1._2
             Y = y;
             Radius = radius;
         }
-
-        public abstract double GetPerimeter();
 
     }
 }
