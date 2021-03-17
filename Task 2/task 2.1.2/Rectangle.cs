@@ -4,11 +4,9 @@ using System.Text;
 
 namespace task_2._1._2
 {
-    class Rectangle : Figure, IHaveArea
+    class Rectangle : Quadrate, IHaveArea
     {
-
         private int height = 0;
-        private int width = 0;
 
         public int Height
         {
@@ -26,30 +24,12 @@ namespace task_2._1._2
             get { return height; }
         }
 
-        public int Width
-        {
-            private set
-            {
-                if (value < 0)
-                {
-                    Console.WriteLine("error");
-                }
-                else
-                {
-                    width = value;
-                }
-            }
-            get { return width; }
-        }
-
-        public Rectangle(int height, int width)
+        public Rectangle(int height, int width): base(width)
         {
             Height = height;
-            Width = width;
         }
 
         public override double GetPerimeter() => 2 * (width * height);
-
-        public double GetArea() => width * height;
+        public override double GetArea() => width * height;
     }
 }

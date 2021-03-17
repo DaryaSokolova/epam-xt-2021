@@ -6,6 +6,6 @@ namespace task_2._1._2
 {
     interface IHaveArea
     {
-        public double GetPerimeter();
+        public double GetArea();
     }
 }
