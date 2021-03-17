@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using MyStringLibrary;
 
 namespace task_2._1
 {
@@ -15,8 +16,8 @@ namespace task_2._1
             MyStringClass newString1 = new MyStringClass(str1);
             MyStringClass newString2 = new MyStringClass(str2);
 
-            Console.WriteLine(str1.CompareTo(str2));
-            Console.WriteLine(newString1.CompareTo(newString2));
+            //Console.WriteLine(str1.CompareTo(str2));
+            //Console.WriteLine(newString1.CompareTo(newString2));
 
             //str1 = String.Concat(str1, str2);
             //Console.WriteLine(str1);

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace task_2._1
+namespace MyStringLibrary
 {
-    class MyStringClass11111
+    public class MyStringClass
     {
 
         private char[] chars { get; set; }
 
-        public MyStringClass11111(char[] _chars)
+        public MyStringClass(char[] _chars)
         {
             chars = _chars;
         }
 
-        public MyStringClass11111(string str)
+        public MyStringClass(string str)
         {
             chars = str.ToCharArray();
         }
@@ -32,7 +32,7 @@ namespace task_2._1
             }
         }
 
-        public int CompareTo(MyStringClass11111 strB)
+        public int CompareTo(MyStringClass strB)
         {
 
             if (this > strB)
@@ -48,7 +48,7 @@ namespace task_2._1
             return 0;
         }
 
-        public static bool operator >(MyStringClass11111 c1, MyStringClass11111 c2)
+        public static bool operator >(MyStringClass c1, MyStringClass c2)
         {
             for (int i = 0; i < c1.Length; i++)
             {
@@ -62,7 +62,7 @@ namespace task_2._1
             return false;
         }
 
-        public static bool operator <(MyStringClass11111 c1, MyStringClass11111 c2)
+        public static bool operator <(MyStringClass c1, MyStringClass c2)
         {
             for (int i = 0; i < c1.Length; i++)
             {
@@ -76,7 +76,7 @@ namespace task_2._1
             return false;
         }
 
-        public static char[] operator +(MyStringClass11111 c1, MyStringClass11111 c2)
+        public static char[] operator +(MyStringClass c1, MyStringClass c2)
         {
             char[] temp = new char[c1.Length + c2.Length];
 
@@ -95,15 +95,15 @@ namespace task_2._1
             return temp;
         }
 
-        public static MyStringClass11111 Concat(MyStringClass11111 strA, MyStringClass11111 strB)
+        public static MyStringClass Concat(MyStringClass strA, MyStringClass strB)
         {
-            MyStringClass11111 str = new MyStringClass11111(strA + strB);
+            MyStringClass str = new MyStringClass(strA + strB);
 
             return str;
         }
-        public static MyStringClass11111 Concat(char[] arr)
+        public static MyStringClass Concat(char[] arr)
         {
-            MyStringClass11111 temp = new MyStringClass11111(arr);
+            MyStringClass temp = new MyStringClass(arr);
 
             return temp;
         }
@@ -139,7 +139,7 @@ namespace task_2._1
             return this.getChars();
         }
 
-        public MyStringClass11111 Insert(int index, MyStringClass11111 str)
+        public MyStringClass Insert(int index, MyStringClass str)
         {
             char[] temp = new char[this.Length + str.Length];
 
@@ -185,7 +185,7 @@ namespace task_2._1
                 }
             }
 
-            MyStringClass11111 tempObject = new MyStringClass11111(temp);
+            MyStringClass tempObject = new MyStringClass(temp);
             return tempObject;
         }
     }

@@ -6,4 +6,8 @@
     <RootNamespace>task_2._1</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyStrongLibrary\MyStringLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
