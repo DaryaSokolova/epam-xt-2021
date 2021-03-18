@@ -6,7 +6,7 @@ namespace task_2._2
 {
     class Player : Field, IMove
     {
-        private int health = 90;
+        private int health = 5;
 
         public int Health
         {
@@ -81,7 +81,7 @@ namespace task_2._2
 
             if ((y + y1 < 0 || y + y1 > Height) || (o1.notMove(x, y + y1) == true) || (o2.notMove(x, y + y1) == true))
             {
-                //?????
+                throw new Exception("*Удар об стенку или препятствие*");
             }
             else
             {

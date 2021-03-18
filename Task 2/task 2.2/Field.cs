@@ -23,8 +23,7 @@ namespace task_2._2
             {
                 if (x < 0 || x > Width)
                 {
-                    //выброс исключения
-                    Console.WriteLine("error");
+                    throw new Exception("Выход за границы поля!");
                 }
                 else
                 {
