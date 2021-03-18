@@ -28,6 +28,29 @@ namespace task_2._2
                 }
             }
         }
+
+        private int countFlower = 0;
+
+        public int CountFlower
+        {
+            get
+            {
+                return countFlower;
+            }
+
+            private set
+            {
+                if (countFlower < 0)
+                {
+                    ///????
+                }
+                else
+                {
+                    countFlower = value;
+                }
+            }
+        }
+
         public void Move(int x, int y)
         {
 
@@ -72,9 +95,14 @@ namespace task_2._2
 
         public Player() { }
 
-        public void getBonus()
+        public void getApple()
         {
             health++;
+        }
+
+        public void getFlower()
+        {
+            countFlower++;
         }
     }
 }
