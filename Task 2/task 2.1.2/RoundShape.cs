@@ -26,9 +26,31 @@ namespace task_2._1._2
             get { return radius; }
         }
 
-        public int X{ get; private set; }
+        public int X
+        {
+            get
+            {
+                return x;
+            }
 
-        public int Y { get; private set; }
+            private set
+            {
+                x = value;
+            }
+        }
+
+        public int Y
+        {
+            get
+            {
+                return y;
+            }
+
+            private set
+            {
+                y = value;
+            }
+        }
 
         public RoundShape(int x, int y, int radius)
         {

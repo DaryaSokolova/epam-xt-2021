@@ -12,11 +12,56 @@ namespace task_2._1._2
         private int x2;
         private int y2;
 
-        public int X1 { get; private set; }
-        public int Y1 { get; private set; }
+        public int X1 
+        {
+            get
+            {
+                return x1;
+            }
 
-        public int X2 { get; private set; }
-        public int Y2 { get; private set; }
+            private set
+            {
+                x1 = value;
+            }
+        }
+
+        public int Y1
+        {
+            get
+            {
+                return y1;
+            }
+
+            private set
+            {
+                y1 = value;
+            }
+        }
+
+        public int X2
+        {
+            get
+            {
+                return x2;
+            }
+
+            private set
+            {
+                x2 = value;
+            }
+        }
+        public int Y2
+        {
+            get
+            {
+                return y2;
+            }
+
+            private set
+            {
+                y2 = value;
+            }
+        }
 
         public Line(int x1, int y1, int x2, int y2)
         {

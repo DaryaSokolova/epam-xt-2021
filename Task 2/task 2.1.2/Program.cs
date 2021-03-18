@@ -28,7 +28,19 @@ namespace task_2._1._2
                 Console.WriteLine("2 - вывести все фигуры");
                 Console.WriteLine("3 - очистить поле");
                 Console.WriteLine("4 - сменить пользователя");
-                int switchAction = Convert.ToInt32(Console.ReadLine());
+
+                int switchAction = 0;
+
+                try
+                {
+                    switchAction = Int32.Parse(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Ошибка: {ex.Message}");
+
+                }
+
                 switch (switchAction)
                 {
                     case 1:
@@ -36,7 +48,19 @@ namespace task_2._1._2
                         {
 
                             Console.WriteLine("№ figure");
-                            int switchFigure = Convert.ToInt32(Console.ReadLine());
+
+                            int switchFigure = 0;
+
+                            try
+                            {
+                                switchFigure = Convert.ToInt32(Console.ReadLine());
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Ошибка: {ex.Message}");
+
+                            }
+
                             switch (switchFigure)
                             {
                                 case 1:

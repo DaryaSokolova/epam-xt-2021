@@ -8,7 +8,18 @@ namespace task_2._1._2
     {
         private string name;
 
-        public string Name { get; private set; }
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            private set
+            {
+                name = value;
+            }
+        }
 
         public Person(string name) 
         {
