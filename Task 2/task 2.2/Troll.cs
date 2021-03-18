@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task_2._2
 {
-    class Troll : Monsters
+    class Troll : Monsters, IMove
     {
         public Troll (int x, int y):base(x,y) { }
 

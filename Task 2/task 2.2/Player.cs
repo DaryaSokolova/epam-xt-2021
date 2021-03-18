@@ -51,20 +51,20 @@ namespace task_2._2
             }
         }
 
-        public void Move(int x, int y)
+        public void Move(int x, int y, Obstacle o1, Obstacle o2)
         {
 
             //Console.WriteLine("Игрок двигается");
 
-            X = MoveX(x);
-            Y = MoveY(y);
+            X = MoveX(x, o1, o2);
+            Y = MoveY(y, o1, o2);
 
         }
 
-        public int MoveX(int x1)
+        public int MoveX(int x1, Obstacle o1, Obstacle o2)
         {
 
-            if (x + x1 < 0 || x + x1 > Width)
+            if ((x + x1 < 0 || x + x1 > Width) || (o1.notMove(x + x1, y) == true) || ((o2.notMove(x + x1, y) == true)))
             {
                 //?????
             }
@@ -76,10 +76,10 @@ namespace task_2._2
             return x;
         }
 
-        public int MoveY(int y1)
+        public int MoveY(int y1, Obstacle o1, Obstacle o2)
         {
 
-            if (y + y1 < 0 || y + y1 > Height)
+            if ((y + y1 < 0 || y + y1 > Height) || (o1.notMove(x, y + y1) == true) || (o2.notMove(x, y + y1) == true))
             {
                 //?????
             }

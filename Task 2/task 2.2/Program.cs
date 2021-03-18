@@ -30,7 +30,7 @@ namespace task_2._2
             return arrBonus;
         }
 
-        static void moveOfWolfs(Wolf wolf, Player I)
+        static void moveOfWolfs(Wolf wolf, Player I, Obstacle obs1, Obstacle obs2)
         {
             Random rnd = new Random();
             int valueForSwitch = rnd.Next(0, 3);
@@ -38,22 +38,22 @@ namespace task_2._2
             switch (valueForSwitch)
             {
                 case 0:
-                    wolf.Move(0, 1);
+                    wolf.Move(0, 1, obs1, obs2);
 
                     break;
 
                 case 1:
-                    wolf.Move(-1, 0);
+                    wolf.Move(-1, 0, obs1, obs2);
 
                     break;
 
                 case 2:
-                    wolf.Move(0, -1);
+                    wolf.Move(0, -1, obs1, obs2);
 
                     break;
 
                 case 3:
-                    wolf.Move(1, 0);
+                    wolf.Move(1, 0, obs1, obs2);
 
                     break;
 
@@ -68,7 +68,7 @@ namespace task_2._2
             }
         }
 
-        static void moveOfTrolls(Troll troll, Player I)
+        static void moveOfTrolls(Troll troll, Player I, Obstacle obs1, Obstacle obs2)
         {
             Random rnd = new Random();
             int valueForSwitch = rnd.Next(0, 3);
@@ -76,22 +76,22 @@ namespace task_2._2
             switch (valueForSwitch)
             {
                 case 0:
-                    troll.Move(0, 1);
+                    troll.Move(0, 1, obs1, obs2);
 
                     break;
 
                 case 1:
-                    troll.Move(-1, 0);
+                    troll.Move(-1, 0, obs1, obs2);
 
                     break;
 
                 case 2:
-                    troll.Move(0, -1);
+                    troll.Move(0, -1, obs1, obs2);
 
                     break;
 
                 case 3:
-                    troll.Move(1, 0);
+                    troll.Move(1, 0, obs1, obs2);
 
                     break;
 
@@ -126,6 +126,9 @@ namespace task_2._2
             Wolf wolf2 = new Wolf(9, 9);
             Troll troll1 = new Troll(3, 6);
 
+            Obstacle obs1 = new Obstacle(4, 4);
+            Obstacle obs2 = new Obstacle(5, 6);
+
             int countBonus = 3;
 
             while (countBonus != 0)
@@ -135,22 +138,22 @@ namespace task_2._2
                 switch (switchAction)
                 {
                     case 'w':
-                        I.Move(0, 1);
+                        I.Move(0, 1, obs1, obs2);
 
                         break;
 
                     case 'a':
-                        I.Move(-1, 0);
+                        I.Move(-1, 0, obs1, obs2);
 
                         break;
 
                     case 's':
-                        I.Move(0, -1);
+                        I.Move(0, -1, obs1, obs2);
 
                         break;
 
                     case 'd':
-                        I.Move(1, 0);
+                        I.Move(1, 0, obs1, obs2);
 
                         break;
 
@@ -160,9 +163,9 @@ namespace task_2._2
                 }
 
                 arrBonus = collectingBonuses(arrBonus, bon1, bon2, flo1, I);
-                moveOfWolfs(wolf1, I);
-                moveOfWolfs(wolf2, I);
-                moveOfTrolls(troll1, I);
+                moveOfWolfs(wolf1, I, obs1, obs2);
+                moveOfWolfs(wolf2, I, obs1, obs2);
+                moveOfTrolls(troll1, I, obs1, obs2);
 
                 int countBonus1 = 0;
                 for (int i1 = 0; i1 < 10; i1++)

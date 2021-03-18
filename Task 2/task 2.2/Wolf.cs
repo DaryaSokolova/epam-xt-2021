@@ -4,7 +4,7 @@ using System.Text;
 
 namespace task_2._2
 {
-    class Wolf : Monsters
+    class Wolf : Monsters, IMove
     {
         public Wolf(int x, int y) : base(x, y) { }
 
