@@ -4,11 +4,11 @@ using System.Text;
 
 namespace task_2._2
 {
-    class Obstacle : Field
+    abstract class Obstacle : Field
     {
         public Obstacle(int x, int y): base(x, y) { }
 
-        public bool notMove(int xMove, int yMove)
+        public virtual bool notMove(int xMove, int yMove)
         {
             if (x == xMove && y == yMove)
             {

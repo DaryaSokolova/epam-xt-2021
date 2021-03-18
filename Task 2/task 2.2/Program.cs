@@ -30,7 +30,7 @@ namespace task_2._2
             return arrBonus;
         }
 
-        static void moveOfWolfs(Wolf wolf, Player I, Obstacle obs1, Obstacle obs2)
+        static void moveOfWolfs(Wolf wolf, Player I, Stone obs1, Tree obs2)
         {
             Random rnd = new Random();
             int valueForSwitch = rnd.Next(0, 3);
@@ -104,7 +104,7 @@ namespace task_2._2
             }
         }
 
-        static void moveOfTrolls(Troll troll, Player I, Obstacle obs1, Obstacle obs2)
+        static void moveOfTrolls(Troll troll, Player I, Stone obs1, Tree obs2)
         {
             Random rnd = new Random();
             int valueForSwitch = rnd.Next(0, 3);
@@ -193,8 +193,8 @@ namespace task_2._2
             Wolf wolf2 = new Wolf(9, 9);
             Troll troll1 = new Troll(3, 6);
 
-            Obstacle obs1 = new Obstacle(4, 4);
-            Obstacle obs2 = new Obstacle(5, 6);
+            Stone obs1 = new Stone(4, 4);
+            Tree obs2 = new Tree(5, 6);
 
             int[,] arrBonus = new int[10, 10];
 
@@ -320,29 +320,29 @@ namespace task_2._2
 
                 if (arrBonus[bon1.X, bon1.Y] == 1)
                 {
-                    arrField[bon1.X, bon1.Y] = '^';
+                    arrField[bon1.X, bon1.Y] = 'A';
 
                 }
 
                 if (arrBonus[bon2.X, bon2.Y] == 1)
                 {
-                    arrField[bon2.X, bon2.Y] = '^';
+                    arrField[bon2.X, bon2.Y] = 'A';
                 }
 
                 if (arrBonus[flo1.X, flo1.Y] == 1)
                 {
-                    arrField[flo1.X, flo1.Y] = '^';
+                    arrField[flo1.X, flo1.Y] = 'F';
                 }
 
-                arrField[wolf1.X, wolf1.Y] = '&';
-                arrField[wolf2.X, wolf2.Y] = '&';
+                arrField[wolf1.X, wolf1.Y] = 'W';
+                arrField[wolf2.X, wolf2.Y] = 'W';
 
-                arrField[troll1.X, troll1.Y] = '&';
+                arrField[troll1.X, troll1.Y] = 'T';
 
-                arrField[obs1.X, obs1.Y] = '@';
+                arrField[obs1.X, obs1.Y] = 'S';
                 arrField[obs2.X, obs2.Y] = '@';
 
-                arrField[I.X, I.Y] = '*';
+                arrField[I.X, I.Y] = 'P';
 
                 for (int j2 = 0; j2 < 15; j2++)
                 {

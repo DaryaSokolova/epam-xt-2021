@@ -8,7 +8,7 @@ namespace task_2._2
     {
         public Monsters(int x, int y) : base(x, y) { }
 
-        public void Move(int x, int y, Obstacle o1, Obstacle o2)
+        public void Move(int x, int y, Stone o1, Tree o2)
         {
             //Console.WriteLine("Монстр двигается");
 
@@ -16,12 +16,12 @@ namespace task_2._2
             Y = MoveY(y, o1, o2);
         }
 
-        public int MoveX(int x1, Obstacle o1, Obstacle o2)
+        public int MoveX(int x1, Stone o1, Tree o2)
         {
 
             if ((x + x1 < 0 || x + x1 > Width) || (o1.notMove(x + x1, y) == true) || (o2.notMove(x + x1, y) == true))
             {
-                //?????
+                throw new Exception("*Удар об стенку или препятствие*");
             }
             else
             {
@@ -31,7 +31,7 @@ namespace task_2._2
             return x;
         }
 
-        public int MoveY(int y1, Obstacle o1, Obstacle o2)
+        public int MoveY(int y1, Stone o1, Tree o2)
         {
 
             if ((y + y1 < 0 || y + y1 > Height) || (o1.notMove(x, y + y1) == true) || (o2.notMove(x, y + y1) == true))

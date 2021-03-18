@@ -17,9 +17,9 @@ namespace task_2._2
 
             private set
             {
-                if (value > 100)
+                if (value > 10)
                 {
-                    //?????
+                    throw new Exception("-Запас здоровья полон!-");
                 }
                 else
                 {
@@ -42,7 +42,7 @@ namespace task_2._2
             {
                 if (countFlower < 0)
                 {
-                    ///????
+                    throw new Exception("Где вы видели отрицательное натуральное число?");
                 }
                 else
                 {
@@ -51,7 +51,7 @@ namespace task_2._2
             }
         }
 
-        public void Move(int x, int y, Obstacle o1, Obstacle o2)
+        public void Move(int x, int y, Stone o1, Tree o2)
         {
 
             //Console.WriteLine("Игрок двигается");
@@ -61,12 +61,12 @@ namespace task_2._2
 
         }
 
-        public int MoveX(int x1, Obstacle o1, Obstacle o2)
+        public int MoveX(int x1, Stone o1, Tree o2)
         {
 
             if ((x + x1 < 0 || x + x1 > Width) || (o1.notMove(x + x1, y) == true) || ((o2.notMove(x + x1, y) == true)))
             {
-                //?????
+                throw new Exception("*Удар об стенку или препятствие*");
             }
             else
             {
@@ -76,7 +76,7 @@ namespace task_2._2
             return x;
         }
 
-        public int MoveY(int y1, Obstacle o1, Obstacle o2)
+        public int MoveY(int y1, Stone o1, Tree o2)
         {
 
             if ((y + y1 < 0 || y + y1 > Height) || (o1.notMove(x, y + y1) == true) || (o2.notMove(x, y + y1) == true))

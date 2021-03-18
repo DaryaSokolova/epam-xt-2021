@@ -43,7 +43,7 @@ namespace task_2._2
             {
                 if (y < 0 || y > Height)
                 {
-                    //выброс исключения
+                    throw new Exception("Выход за границы поля!");
                 }
                 else
                 {
