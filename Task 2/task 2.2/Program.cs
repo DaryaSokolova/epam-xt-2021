@@ -206,12 +206,12 @@ namespace task_2._2
 
             while ((countBonus != 0) && (I.Health > 0))
             {
-                string str = Console.ReadLine();
+
                 char switchAction = '0';
 
                 try
                 {
-                    switchAction = Char.Parse(str);
+                    switchAction = Char.Parse(Console.ReadLine());
 
                 }
                 catch (Exception ex)
