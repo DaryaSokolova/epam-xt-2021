@@ -22,6 +22,18 @@ namespace MyStringLibrary
             }
         }
 
+        public char this[int index]
+        {
+            set
+            {
+                chars[index] = value;
+            }
+            get
+            {
+                return chars[index];
+            }
+        }
+
         public MyStringClass(char[] chars)
         {
             Chars = chars;
