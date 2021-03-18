@@ -53,7 +53,7 @@ namespace task_2._1._2
 
                             try
                             {
-                                switchFigure = Convert.ToInt32(Console.ReadLine());
+                                switchFigure = Int32.Parse(Console.ReadLine());
                             }
                             catch (Exception ex)
                             {
