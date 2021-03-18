@@ -95,17 +95,17 @@ namespace task_2._2
 
         public Player() { }
 
-        public int getApple()
+        public int setApple()
         {
             return health++;
         }
 
-        public int getFlower()
+        public int setFlower()
         {
             return countFlower++;
         }
 
-        public int getHurt()
+        public int setHurt()
         {
             return health--;
         }

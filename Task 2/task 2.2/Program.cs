@@ -8,21 +8,21 @@ namespace task_2._2
         {
             if (b1.bonusReceived(player.X, player.Y) == true && arrBonus[b1.X, b1.Y] == 1)
             {
-                player.getApple();
+                player.setApple();
                 Console.WriteLine("Яблоко собрано!");
                 arrBonus[b1.X, b1.Y] = 0;
             }
 
             if (b2.bonusReceived(player.X, player.Y) == true && arrBonus[b2.X, b2.Y] == 1)
             {
-                player.getApple();
+                player.setApple();
                 Console.WriteLine("Яблоко собрано!");
                 arrBonus[b2.X, b2.Y] = 0;
             }
 
             if (f1.bonusReceived(player.X, player.Y) == true && arrBonus[f1.X, f1.Y] == 1)
             {
-                player.getFlower();
+                player.setFlower();
                 Console.WriteLine("Вы нашли цветочек!");
                 arrBonus[f1.X, f1.Y] = 0;
             }
@@ -100,7 +100,7 @@ namespace task_2._2
 
             if (wolf.meetWithPlayer(I) == true)
             {
-                I.getHurt();
+                I.setHurt();
             }
         }
 
@@ -174,7 +174,7 @@ namespace task_2._2
 
             if (troll.meetWithPlayer(I) == true)
             {
-                I.getHurt();
+                I.setHurt();
             }
         }
 
