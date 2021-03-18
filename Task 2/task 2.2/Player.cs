@@ -54,7 +54,7 @@ namespace task_2._2
         public void Move(int x, int y)
         {
 
-            Console.WriteLine("Игрок двигается");
+            //Console.WriteLine("Игрок двигается");
 
             X = MoveX(x);
             Y = MoveY(y);
@@ -95,14 +95,20 @@ namespace task_2._2
 
         public Player() { }
 
-        public void getApple()
+        public int getApple()
         {
-            health++;
+            return health++;
         }
 
-        public void getFlower()
+        public int getFlower()
         {
-            countFlower++;
+            return countFlower++;
         }
+
+        public int getHurt()
+        {
+            return health--;
+        }
+
     }
 }
