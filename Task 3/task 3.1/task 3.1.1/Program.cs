@@ -7,14 +7,14 @@ namespace task_3._1._1
     class Program
     {
 
-        static List<int> rounds(List<int> numbers)
+        static List<int> rounds(List<int> numbers, int valueForGame)
         {
             int count = 1;
             int index = 0;
 
             while (numbers.Count != 1)
             {
-                if (count % 5 == 0)
+                if (count % valueForGame == 0)
                 {
                     Console.WriteLine($"delete: {numbers[index]}, осталось: {numbers.Count - 1}");
                     numbers.RemoveAt(index);
@@ -39,13 +39,14 @@ namespace task_3._1._1
             Console.WriteLine("Hello World!");
 
             List<int> numbers = new List<int>() { };
-            int N = 0; bool fl = true;
-
-            Console.Write("Введите N:");
+            int N = 0; int valueForGame = 0; bool fl = true;
 
             try
             {
+                Console.Write("Введите N:");
                 N = Int32.Parse(Console.ReadLine());
+                Console.Write("Введите какой номер удалять в каждом раунде:");
+                valueForGame = Int32.Parse(Console.ReadLine());
             }
             catch (Exception ex)
             {
@@ -59,9 +60,9 @@ namespace task_3._1._1
                 numbers.Add(i);
             }
 
-            if (fl == true && N > 1)
+            if (fl == true && N > 1 && valueForGame > 1)
             {
-                numbers = rounds(numbers);
+                numbers = rounds(numbers, valueForGame);
             }
 
         }
