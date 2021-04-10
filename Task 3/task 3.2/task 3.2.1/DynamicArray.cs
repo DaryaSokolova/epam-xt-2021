@@ -23,7 +23,7 @@ namespace task_3._2._1
         {
             get { return capacity; }
 
-            set
+            private set
             {
 
                 if (array.Length == 0)
