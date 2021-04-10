@@ -7,7 +7,7 @@ namespace task_3._2._1
 {
     public class DynamicArrayEnumerator<T> : IEnumerator<T>
     {
-        int position = -1;
+        private int position = -1;
         private T[] enumeratorArray;
 
         public DynamicArrayEnumerator(T[] array)
