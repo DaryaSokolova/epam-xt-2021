@@ -9,7 +9,7 @@ namespace task_3._3._1
 
             Console.WriteLine("Hello World!");
 
-            int[] arr = new int[] { 1, 2, 5, 76, 5, 7 };
+            byte[] arr = new byte[] { 1, 2, 5, 76, 5, 7 };
 
             //arr.MyForeach(MyLoveValue);
 
