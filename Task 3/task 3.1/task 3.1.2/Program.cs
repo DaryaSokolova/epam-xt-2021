@@ -35,13 +35,13 @@ namespace task_3._1._2
             {
                 case 1:
                     var selectedWords = from w in words
-                                        where w.Value > 13
+                                        where w.Value > 3
                                         select w;
 
                     if (selectedWords.Count() != 0)
                     {
 
-                        Console.WriteLine("Слова, повторившиеся более 13 раз:");
+                        Console.WriteLine("Слова, повторившиеся более 3 раз:");
 
                         foreach (var u in selectedWords)
                         {
