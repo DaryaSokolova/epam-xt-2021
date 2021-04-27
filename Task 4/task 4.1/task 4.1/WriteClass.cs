@@ -19,10 +19,8 @@ namespace task_4._1
                 temp = $"{ReserveFolder}\\{Guid.NewGuid()}";
                 variableForCreate.WriteLine(DateTime.Now);
                 variableForCreate.WriteLine(temp);
-                variableForCreate.Write($"File {e.Name} was created. ");
-                variableForCreate.Write($"The action performed with it: { e.ChangeType}. ");
-                variableForCreate.Write($"Path to the file: {e.FullPath}." + Environment.NewLine);
-                variableForCreate.WriteLine("---");
+                variableForCreate.Write($"{e.Name} {e.ChangeType} {e.FullPath}" + Environment.NewLine);
+                variableForCreate.Write(" ");
             }
 
             Directory.CreateDirectory(temp);
@@ -37,10 +35,8 @@ namespace task_4._1
                 temp = $"{ReserveFolder}\\{Guid.NewGuid()}";
                 variableForRename.WriteLine(DateTime.Now);
                 variableForRename.WriteLine(temp);
-                variableForRename.Write($"{e.OldFullPath} was renamed to {e.FullPath}. ");
-                variableForRename.Write($"Action with { e.ChangeType}. ");
-                variableForRename.Write($"Path to the file: {e.FullPath}." + Environment.NewLine);
-                variableForRename.WriteLine("---");
+                variableForRename.Write($"{e.OldFullPath} ->> {e.FullPath} {e.ChangeType} {e.FullPath}." + Environment.NewLine);
+                variableForRename.Write(" ");
             }
 
             Directory.CreateDirectory(temp);
@@ -54,10 +50,8 @@ namespace task_4._1
                 temp = $"{ReserveFolder}\\{Guid.NewGuid()}";
                 variableForChange.WriteLine(DateTime.Now);
                 variableForChange.WriteLine(temp);
-                variableForChange.Write($"{e.Name} was changed.");
-                variableForChange.Write($"Action with { e.ChangeType}. ");
-                variableForChange.Write($"Path to the file: {e.FullPath}." + Environment.NewLine);
-                variableForChange.WriteLine("---");
+                variableForChange.Write($"{e.Name} {e.ChangeType} {e.FullPath}" + Environment.NewLine);
+                variableForChange.Write(" ");
             }
 
             Directory.CreateDirectory(temp);
@@ -71,10 +65,8 @@ namespace task_4._1
                 temp = $"{ReserveFolder}\\{Guid.NewGuid()}";
                 variableForDelete.WriteLine(DateTime.Now);
                 variableForDelete.WriteLine(temp);
-                variableForDelete.Write($"{e.Name} was deleled. ");
-                variableForDelete.Write($"Action with { e.ChangeType}. ");
-                variableForDelete.Write($"Path to the file: {e.FullPath}." + Environment.NewLine);
-                variableForDelete.WriteLine("---");
+                variableForDelete.Write($"{e.Name} {e.ChangeType} {e.FullPath}" + Environment.NewLine);
+                variableForDelete.Write(" ");
             }
 
             Directory.CreateDirectory(temp);
