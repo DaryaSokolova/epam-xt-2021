@@ -1,24 +1,18 @@
-.menu
+#menu
 {
-    /* margin: 10px; */
-    /* padding: 15px; */
+    margin: 50px;
+    padding: 15px;
     background: rgb(3, 247, 64);
     border-radius: 15px;
     width: 200px;
-    height: 150;
-    min-height: 150px;
-    position: absolute;
-    left: 160px;
-    top: 50px;
+    min-height: 50px;
     border: 1px solid black;
+    box-shadow: 10px 10px rgb(255, 0, 140);
 }
 
 
-.menu > ul
+#menu > ul
 {
-    position: absolute;
-    left: 20px;
-    top: 10px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -27,17 +21,5 @@
 ul > li 
 {
     margin: 5px;
-    color: rgb(131, 42, 20);
-}
-
-.menu-shadow
-{
-    margin: 10px;
-    background: rgb(131, 42, 20);
-    border-radius: 15px;
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    left: 160px;
-    top: 50px;
+    color: rgb(255, 0, 140);
 }
