@@ -10,33 +10,27 @@
 </head>
 
 <body>
-    <div class="menu">
+    <form class="menu" method="POST" action="#">
 
         <h2 class="menu__header"> Регистрация </h2>
         <hr>
         <div class="menu__container menu__container-long">
-            <p class="menu__text">
-                E-mail
-            </p>
-            <input type="email" name="" id="" class="menu__input-email">
+            <label for="email" class="menu__text">E-mail</label>
+            <input type="email" name="email" id="email" class="menu__input-email">
         </div>
 
         <div class="menu__container menu__container-left">
-            <p class="menu__text">
-                Пароль
-            </p>
-            <input type="password" name="" id="" class="menu__input-password">
+            <label for="password" class="menu__text">Пароль</label>
+            <input type="password" name="password" id="password" class="menu__input-password">
         </div>
 
         <div class="menu__container menu__container-right">
-            <p class="menu__text">
-                Еще раз
-            </p>
-            <input type="password" name="" id="" class="menu__input-password">
+            <label for="rep-password" class="menu__text">Ещё раз</label>
+            <input type="password" name="rep-password" id="rep-password" class="menu__input-password">
         </div>
 
         <input type="button" value="Отправить" class="menu__button">
-    </div>
+    </form>
 </body>
 
 </html>
