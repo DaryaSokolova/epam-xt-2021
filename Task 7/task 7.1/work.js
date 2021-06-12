@@ -1,10 +1,10 @@
 let str = "у попа была собака"
 
 const newString = (strForFunc) => {
-    let tempArr = strForFunc.split(' ');
+    let tempArrOfWords = strForFunc.split(' ');
     let newStr = "";
 
-    tempArr.forEach(element1 => {
+    tempArrOfWords.forEach(element1 => {
         let tempWord = element1.split("");
         let newWord = "";
 
@@ -19,4 +19,5 @@ const newString = (strForFunc) => {
     return newStr;
 }
 
+console.log(str);
 console.log(newString(str));
