@@ -13,7 +13,7 @@ const newString = (strForFunc) => {
                 newWord += element2;
             }
         });
-        newStr+=newWord + " ";
+        newStr += newWord + " ";
     });
 
     return newStr;
