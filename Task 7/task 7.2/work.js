@@ -7,24 +7,24 @@ const answer = (strForFunc) => {
     let result = Number(tempStr[0]);
 
     for (let index = 0; index < tempStr.length - 1; index++) {
-        let elTwo = Number(tempStr[index + 1]);
+        let elNext = Number(tempStr[index + 1]);
 
         switch (tempNotNumber[index]) {
 
             case "+":
-                result += elTwo;
+                result += elNext;
                 break;
 
             case "-":
-                result -= elTwo;
+                result -= elNext;
                 break;
 
             case "*":
-                result *= elTwo;
+                result *= elNext;
                 break;
 
             case "/":
-                result /= elTwo;
+                result /= elNext;
                 break;
 
             default:
