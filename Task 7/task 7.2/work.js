@@ -2,14 +2,14 @@ let str = "3.5 +4*10-5.3 /5 =";
 
 const answer = (strForFunc) => {
     const tempStr = strForFunc.match(/\d+(\.\d+)?/g);
-    const tempNotNumber = strForFunc.match(/[-+*/]/g);
+    const sign = strForFunc.match(/[-+*/]/g);
 
     let result = Number(tempStr[0]);
 
     for (let index = 0; index < tempStr.length - 1; index++) {
         let elNext = Number(tempStr[index + 1]);
 
-        switch (tempNotNumber[index]) {
+        switch (sign[index]) {
 
             case "+":
                 result += elNext;
