@@ -12,7 +12,7 @@ namespace startWithThreeLayers.DAL.JsonDAL
 {
     public class UsersJsonDAO : IUsersDAO
     {
-        public const string JsonFilesPath = @"C:\Users\Darya Sokolova\epam-xt-2021\Task 8\task 8.1.1\Files\";
+        public const string JsonFilesPath = @"C:\Users\Darya Sokolova\epam-xt-2021\Task 8\task 8.1.2\Files\";
 
         public void AddUser(User user)
         {

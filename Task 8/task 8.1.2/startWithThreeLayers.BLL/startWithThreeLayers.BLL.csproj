@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\startWithThreeLayers.BLL.Interfaces\startWithThreeLayers.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\startWithThreeLayers.DAL.Interfaces\startWithThreeLayers.DAL.Interfaces.csproj" />
+    <ProjectReference Include="..\startWithThreeLayers.Entities\startWithThreeLayers.Entities.csproj" />
+    <ProjectReference Include="..\startWithThreeLayers.JsonDAL\startWithThreeLayers.JsonDAL.csproj" />
+  </ItemGroup>
+
+</Project>
